@@ -1,0 +1,243 @@
+# Danh sách lỗi — TRƯỚC khi sửa (v1)
+ảnh đã quét: 203
+
+class_names -> 2 dòng
+duplicates -> 16 dòng
+images -> 5 dòng
+label_format -> 37 dòng
+missing_labels -> 18 dòng
+second_opinion -> 128 dòng
+stats -> 4 dòng
+
+[ERROR] BAD_CLASS_ID         img_0020.txt:3  id lớp 93 ngoài 0..3
+[ERROR] BAD_CLASS_ID         img_0099.txt:2  id lớp -1 ngoài 0..3
+[ERROR] BAD_CLASS_ID         img_0104.txt:1  id lớp 7 ngoài 0..3
+[ERROR] BAD_CLASS_ID         img_0117.txt:12  id lớp -1 ngoài 0..3
+[ERROR] BAD_CLASS_ID         img_0194.txt:1  id lớp 4 ngoài 0..3
+[ERROR] BAD_CLASS_ID         img_0199.txt:7  id lớp 4 ngoài 0..3
+[ERROR] BAD_CLASS_NAME       data.yaml  tên lớp lạ: 'Person' (id 1)
+[ERROR] BAD_CLASS_NAME       data.yaml  tên lớp lạ: 'Bus' (id 3)
+[ERROR] BAD_FORMAT           img_0014.txt:1  dòng sai định dạng: '1 0.131568 0.075191 0.262343 nan' (giá trị nan/inf)
+[ERROR] BAD_FORMAT           img_0022.txt:1  dòng sai định dạng: '0 0.070102 0.969241 0.139901 nan' (giá trị nan/inf)
+[ERROR] BAD_FORMAT           img_0179.txt:1  dòng sai định dạng: '1 0.504931 0.596629 0.267039' (cần 5 cột, có 4)
+[ERROR] BAD_SIZE             img_0107  cạnh ngắn 180px < 250px
+[ERROR] BAD_SIZE             img_0113  cạnh ngắn 226px < 250px
+[ERROR] BAD_SIZE             img_0122  cạnh ngắn 180px < 250px
+[ERROR] BOX_OUT_OF_IMAGE     img_0030.txt:9  box tràn ảnh: 0.0230
+[ERROR] BOX_OUT_OF_IMAGE     img_0043.txt:1  box tràn ảnh: 0.0300
+[ERROR] BOX_OUT_OF_IMAGE     img_0078.txt:2  box tràn ảnh: 0.0300
+[ERROR] BOX_OUT_OF_IMAGE     img_0087.txt:1  box tràn ảnh: 0.0600
+[ERROR] BOX_OUT_OF_IMAGE     img_0108.txt:1  box tràn ảnh: 0.0300
+[ERROR] BOX_OUT_OF_IMAGE     img_0144.txt:1  box tràn ảnh: 0.0600
+[ERROR] BOX_OUT_OF_IMAGE     img_0152.txt:1  box tràn ảnh: 0.0300
+[ERROR] BOX_OUT_OF_IMAGE     img_0204.txt:1  box tràn ảnh: 0.0600
+[ERROR] BOX_ZERO             img_0050.txt:1  kích thước box <= 0 (w=0.0, h=0.396065)
+[ERROR] BOX_ZERO             img_0066.txt:3  kích thước box <= 0 (w=0.076818, h=0.0)
+[ERROR] BOX_ZERO             img_0092.txt:2  kích thước box <= 0 (w=0.0, h=0.090633)
+[ERROR] BOX_ZERO             img_0185.txt:10  kích thước box <= 0 (w=0.154531, h=0.0)
+[ERROR] CORRUPT_IMAGE        img_0010  không mở được: UnidentifiedImageError
+[ERROR] CORRUPT_IMAGE        img_0136  không mở được: OSError
+[ERROR] DUP_BOX              img_0001.txt:3  box trùng với dòng 1
+[ERROR] DUP_BOX              img_0006.txt:2  box trùng với dòng 1
+[ERROR] DUP_BOX              img_0024.txt:8  box trùng với dòng 6
+[ERROR] DUP_BOX              img_0094.txt:13  box trùng với dòng 9
+[ERROR] DUP_BOX              img_0109.txt:2  box trùng với dòng 1
+[ERROR] DUP_BOX              img_0141.txt:2  box trùng với dòng 1
+[ERROR] DUP_BOX              img_0193.txt:7  box trùng với dòng 2
+[ERROR] DUP_IMAGE_EXACT      img_0039  trùng từng byte với img_0012
+[ERROR] DUP_IMAGE_EXACT      img_0080  trùng từng byte với img_0071
+[ERROR] DUP_IMAGE_EXACT      img_0102  trùng từng byte với img_0082
+[ERROR] DUP_IMAGE_EXACT      img_0156  trùng từng byte với img_0147
+[ERROR] DUP_IMAGE_EXACT      img_0162  trùng từng byte với img_0054
+[ERROR] DUP_IMAGE_EXACT      img_0203  trùng từng byte với img_0145
+[ERROR] DUP_IMAGE_EXACT      img_0207  trùng từng byte với img_0182
+[ERROR] DUP_IMAGE_EXACT      img_0222  trùng từng byte với img_0151
+[ERROR] DUP_IMAGE_NEAR       img_0076  trùng gần đúng với img_0042 (phash 0)
+[ERROR] DUP_IMAGE_NEAR       img_0143  trùng gần đúng với img_0037 (phash 0)
+[ERROR] DUP_IMAGE_NEAR       img_0223  trùng gần đúng với img_0077 (phash 6)
+[ERROR] LEAK_TEST            img_0049  trùng ảnh kho test/val: test/test_033.jpg
+[ERROR] LEAK_TEST            img_0101  trùng ảnh kho test/val: test/test_039.jpg
+[ERROR] LEAK_TEST            img_0167  trùng ảnh kho test/val: test/test_044.jpg
+[ERROR] LEAK_TEST            img_0174  trùng ảnh kho test/val: test/test_085.jpg
+[ERROR] LEAK_TEST            img_0221  trùng ảnh kho test/val: test/test_009.jpg
+[ERROR] MISSING_LABEL_FILE   img_0031  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0053  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0126  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0135  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0170  ảnh không có file nhãn
+[ERROR] MISSING_LABEL_FILE   img_0219  ảnh không có file nhãn
+[WARN ] BOX_HUGE             img_0018.txt:1  diện tích box 0.970 > 0.95
+[WARN ] BOX_HUGE             img_0128.txt:1  diện tích box 0.988 > 0.95
+[WARN ] BOX_HUGE             img_0196.txt:1  diện tích box 0.984 > 0.95
+[WARN ] BOX_TINY             img_0026.txt:6  cạnh ngắn 11.4px < 12px
+[WARN ] BOX_TINY             img_0051.txt:5  cạnh ngắn 8.9px < 12px
+[WARN ] BOX_TINY             img_0069.txt:2  cạnh ngắn 11.2px < 12px
+[WARN ] BOX_TINY             img_0161.txt:2  cạnh ngắn 10.3px < 12px
+[WARN ] BOX_TINY             img_0161.txt:3  cạnh ngắn 11.4px < 12px
+[WARN ] BOX_TINY             img_0161.txt:4  cạnh ngắn 11.9px < 12px
+[WARN ] CLASS_RARE           <dataset>  lớp -1 chỉ có 2 box
+[WARN ] CLASS_RARE           <dataset>  lớp 4 chỉ có 2 box
+[WARN ] CLASS_RARE           <dataset>  lớp 7 chỉ có 1 box
+[WARN ] CLASS_RARE           <dataset>  lớp 93 chỉ có 1 box
+[WARN ] EMPTY_LABEL          img_0004  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0013  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0057  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0065  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0097  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0103  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0129  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0147  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0157  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0178  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0184  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] EMPTY_LABEL          img_0192  file nhãn rỗng: ảnh nền hay thiếu nhãn?
+[WARN ] POSSIBLE_FALSE_POS   img_0024.txt:7  dòng 7: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0030.txt:9  dòng 9: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0035.txt:2  dòng 2: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0050.txt:1  dòng 1: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0066.txt:3  dòng 3: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0068.txt:7  dòng 7: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0069.txt:2  dòng 2: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0070.txt:6  dòng 6: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0078.txt:2  dòng 2: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0091.txt:7  dòng 7: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0092.txt:2  dòng 2: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0092.txt:10  dòng 10: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0095.txt:6  dòng 6: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0099.txt:15  dòng 15: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0100.txt:4  dòng 4: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0108.txt:1  dòng 1: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0111.txt:2  dòng 2: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0144.txt:1  dòng 1: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0149.txt:3  dòng 3: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0150.txt:3  dòng 3: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0155.txt:2  dòng 2: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0155.txt:3  dòng 3: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0177.txt:2  dòng 2: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0180.txt:5  dòng 5: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0185.txt:10  dòng 10: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0189.txt:4  dòng 4: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0193.txt:6  dòng 6: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0204.txt:1  dòng 1: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_FALSE_POS   img_0206.txt:1  dòng 1: box nhãn không khớp dự đoán nào của model
+[WARN ] POSSIBLE_LOOSE_BOX   img_0015  box nhãn lỏng/lệch so với dự đoán (IoU 0.34 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0018  box nhãn lỏng/lệch so với dự đoán (IoU 0.45 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0036  box nhãn lỏng/lệch so với dự đoán (IoU 0.43 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0038  box nhãn lỏng/lệch so với dự đoán (IoU 0.40 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0045  box nhãn lỏng/lệch so với dự đoán (IoU 0.33 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0046  box nhãn lỏng/lệch so với dự đoán (IoU 0.38 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0054  box nhãn lỏng/lệch so với dự đoán (IoU 0.38 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0062  box nhãn lỏng/lệch so với dự đoán (IoU 0.47 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0062  box nhãn lỏng/lệch so với dự đoán (IoU 0.35 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0064  box nhãn lỏng/lệch so với dự đoán (IoU 0.45 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0077  box nhãn lỏng/lệch so với dự đoán (IoU 0.40 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0082  box nhãn lỏng/lệch so với dự đoán (IoU 0.48 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0090  box nhãn lỏng/lệch so với dự đoán (IoU 0.46 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0094  box nhãn lỏng/lệch so với dự đoán (IoU 0.39 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0096  box nhãn lỏng/lệch so với dự đoán (IoU 0.47 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0119  box nhãn lỏng/lệch so với dự đoán (IoU 0.41 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0125  box nhãn lỏng/lệch so với dự đoán (IoU 0.42 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  box nhãn lỏng/lệch so với dự đoán (IoU 0.44 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0127  box nhãn lỏng/lệch so với dự đoán (IoU 0.38 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0131  box nhãn lỏng/lệch so với dự đoán (IoU 0.33 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0142  box nhãn lỏng/lệch so với dự đoán (IoU 0.43 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0171  box nhãn lỏng/lệch so với dự đoán (IoU 0.43 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0171  box nhãn lỏng/lệch so với dự đoán (IoU 0.33 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0175  box nhãn lỏng/lệch so với dự đoán (IoU 0.42 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0179  box nhãn lỏng/lệch so với dự đoán (IoU 0.37 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0200  box nhãn lỏng/lệch so với dự đoán (IoU 0.43 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0217  box nhãn lỏng/lệch so với dự đoán (IoU 0.34 < 0.5)
+[WARN ] POSSIBLE_LOOSE_BOX   img_0217  box nhãn lỏng/lệch so với dự đoán (IoU 0.36 < 0.5)
+[WARN ] POSSIBLE_MISSING     img_0001  model thấy person (conf 0.95) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0004  model thấy car (conf 0.89) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0004  model thấy car (conf 0.79) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0012  model thấy person (conf 0.67) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0014  model thấy person (conf 0.85) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0020  model thấy person (conf 0.84) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0022  model thấy car (conf 0.85) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0028  model thấy person (conf 0.94) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0030  model thấy person (conf 0.69) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0032  model thấy person (conf 0.61) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0047  model thấy person (conf 0.72) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0050  model thấy person (conf 0.93) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0057  model thấy person (conf 0.89) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0058  model thấy person (conf 0.73) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0065  model thấy bus (conf 0.94) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0066  model thấy bus (conf 0.95) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0067  model thấy person (conf 0.84) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0068  model thấy person (conf 0.89) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0078  model thấy car (conf 0.85) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0086  model thấy person (conf 0.88) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0092  model thấy car (conf 0.91) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0093  model thấy person (conf 0.71) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0096  model thấy person (conf 0.86) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0099  model thấy person (conf 0.88) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0100  model thấy person (conf 0.62) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0103  model thấy person (conf 0.92) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0104  model thấy person (conf 0.93) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0116  model thấy person (conf 0.79) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0117  model thấy person (conf 0.67) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0121  model thấy person (conf 0.76) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0127  model thấy person (conf 0.68) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0131  model thấy person (conf 0.89) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0134  model thấy person (conf 0.68) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0144  model thấy person (conf 0.96) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0145  model thấy person (conf 0.94) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0147  model thấy person (conf 0.78) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0151  model thấy bus (conf 0.73) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0157  model thấy person (conf 0.90) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0159  model thấy person (conf 0.93) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0160  model thấy truck (conf 0.78) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0164  model thấy person (conf 0.78) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0165  model thấy person (conf 0.82) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0178  model thấy person (conf 0.93) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0184  model thấy person (conf 0.79) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0187  model thấy person (conf 0.93) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0194  model thấy car (conf 0.60) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0199  model thấy person (conf 0.83) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0204  model thấy person (conf 0.91) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0210  model thấy car (conf 0.67) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0211  model thấy car (conf 0.75) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0215  model thấy person (conf 0.94) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0218  model thấy person (conf 0.84) nhưng nhãn không có
+[WARN ] POSSIBLE_MISSING     img_0220  model thấy person (conf 0.82) nhưng nhãn không có
+[WARN ] POSSIBLE_WRONG_CLASS img_0019  nghi gán nhầm lớp: model thấy car (conf 0.94), nhãn có lớp khác (IoU 0.99)
+[WARN ] POSSIBLE_WRONG_CLASS img_0020  nghi gán nhầm lớp: model thấy bus (conf 0.95), nhãn có lớp khác (IoU 0.94)
+[WARN ] POSSIBLE_WRONG_CLASS img_0021  nghi gán nhầm lớp: model thấy person (conf 0.93), nhãn có lớp khác (IoU 0.97)
+[WARN ] POSSIBLE_WRONG_CLASS img_0034  nghi gán nhầm lớp: model thấy person (conf 0.91), nhãn có lớp khác (IoU 0.89)
+[WARN ] POSSIBLE_WRONG_CLASS img_0037  nghi gán nhầm lớp: model thấy car (conf 0.91), nhãn có lớp khác (IoU 0.97)
+[WARN ] POSSIBLE_WRONG_CLASS img_0070  nghi gán nhầm lớp: model thấy person (conf 0.95), nhãn có lớp khác (IoU 0.99)
+[WARN ] POSSIBLE_WRONG_CLASS img_0071  nghi gán nhầm lớp: model thấy person (conf 0.93), nhãn có lớp khác (IoU 0.99)
+[WARN ] POSSIBLE_WRONG_CLASS img_0075  nghi gán nhầm lớp: model thấy person (conf 0.91), nhãn có lớp khác (IoU 0.97)
+[WARN ] POSSIBLE_WRONG_CLASS img_0083  nghi gán nhầm lớp: model thấy car (conf 0.69), nhãn có lớp khác (IoU 0.95)
+[WARN ] POSSIBLE_WRONG_CLASS img_0112  nghi gán nhầm lớp: model thấy person (conf 0.79), nhãn có lớp khác (IoU 0.93)
+[WARN ] POSSIBLE_WRONG_CLASS img_0124  nghi gán nhầm lớp: model thấy car (conf 0.93), nhãn có lớp khác (IoU 0.97)
+[WARN ] POSSIBLE_WRONG_CLASS img_0160  nghi gán nhầm lớp: model thấy truck (conf 0.78), nhãn có lớp khác (IoU 0.95)
+[WARN ] POSSIBLE_WRONG_CLASS img_0183  nghi gán nhầm lớp: model thấy person (conf 0.91), nhãn có lớp khác (IoU 0.94)
+[WARN ] POSSIBLE_WRONG_CLASS img_0185  nghi gán nhầm lớp: model thấy person (conf 0.68), nhãn có lớp khác (IoU 0.90)
+[WARN ] POSSIBLE_WRONG_CLASS img_0191  nghi gán nhầm lớp: model thấy person (conf 0.91), nhãn có lớp khác (IoU 0.95)
+[WARN ] POSSIBLE_WRONG_CLASS img_0202  nghi gán nhầm lớp: model thấy person (conf 0.94), nhãn có lớp khác (IoU 0.99)
+[WARN ] POSSIBLE_WRONG_CLASS img_0208  nghi gán nhầm lớp: model thấy person (conf 0.92), nhãn có lớp khác (IoU 0.94)
+[WARN ] POSSIBLE_WRONG_CLASS img_0212  nghi gán nhầm lớp: model thấy person (conf 0.84), nhãn có lớp khác (IoU 0.77)
+
+## Tổng hợp theo mã
+error BAD_CLASS_ID           6
+error BAD_CLASS_NAME         2
+error BAD_FORMAT             3
+error BAD_SIZE               3
+error BOX_OUT_OF_IMAGE       8
+error BOX_ZERO               4
+error CORRUPT_IMAGE          2
+error DUP_BOX                7
+error DUP_IMAGE_EXACT        8
+error DUP_IMAGE_NEAR         3
+error LEAK_TEST              5
+error MISSING_LABEL_FILE     6
+warn  BOX_HUGE               3
+warn  BOX_TINY               6
+warn  CLASS_RARE             4
+warn  EMPTY_LABEL            12
+warn  POSSIBLE_FALSE_POS     29
+warn  POSSIBLE_LOOSE_BOX     28
+warn  POSSIBLE_MISSING       53
+warn  POSSIBLE_WRONG_CLASS   18

@@ -1,0 +1,34 @@
+# Bước 1 — nhận dữ liệu: ảnh bị loại
+ảnh đã quét: 224
+
+duplicates -> 16 dòng
+images -> 5 dòng
+
+[ERROR] BAD_SIZE             img_0107  cạnh ngắn 180px < 250px
+[ERROR] BAD_SIZE             img_0113  cạnh ngắn 226px < 250px
+[ERROR] BAD_SIZE             img_0122  cạnh ngắn 180px < 250px
+[ERROR] CORRUPT_IMAGE        img_0010  không mở được: UnidentifiedImageError
+[ERROR] CORRUPT_IMAGE        img_0136  không mở được: OSError
+[ERROR] DUP_IMAGE_EXACT      img_0039  trùng từng byte với img_0012
+[ERROR] DUP_IMAGE_EXACT      img_0080  trùng từng byte với img_0071
+[ERROR] DUP_IMAGE_EXACT      img_0102  trùng từng byte với img_0082
+[ERROR] DUP_IMAGE_EXACT      img_0156  trùng từng byte với img_0147
+[ERROR] DUP_IMAGE_EXACT      img_0162  trùng từng byte với img_0054
+[ERROR] DUP_IMAGE_EXACT      img_0203  trùng từng byte với img_0145
+[ERROR] DUP_IMAGE_EXACT      img_0207  trùng từng byte với img_0182
+[ERROR] DUP_IMAGE_EXACT      img_0222  trùng từng byte với img_0151
+[ERROR] DUP_IMAGE_NEAR       img_0076  trùng gần đúng với img_0042 (phash 0)
+[ERROR] DUP_IMAGE_NEAR       img_0143  trùng gần đúng với img_0037 (phash 0)
+[ERROR] DUP_IMAGE_NEAR       img_0223  trùng gần đúng với img_0077 (phash 6)
+[ERROR] LEAK_TEST            img_0049  trùng ảnh kho test/val: test/test_033.jpg
+[ERROR] LEAK_TEST            img_0101  trùng ảnh kho test/val: test/test_039.jpg
+[ERROR] LEAK_TEST            img_0167  trùng ảnh kho test/val: test/test_044.jpg
+[ERROR] LEAK_TEST            img_0174  trùng ảnh kho test/val: test/test_085.jpg
+[ERROR] LEAK_TEST            img_0221  trùng ảnh kho test/val: test/test_009.jpg
+
+## Tổng hợp theo mã
+error BAD_SIZE               3
+error CORRUPT_IMAGE          2
+error DUP_IMAGE_EXACT        8
+error DUP_IMAGE_NEAR         3
+error LEAK_TEST              5

@@ -1,0 +1,22 @@
+check,severity,code,image,line,message,extra
+images,error,CORRUPT_IMAGE,img_0010,,không mở được: UnidentifiedImageError,
+images,error,BAD_SIZE,img_0107,,cạnh ngắn 180px < 250px,"{""size"": [240, 180]}"
+images,error,BAD_SIZE,img_0113,,cạnh ngắn 226px < 250px,"{""size"": [240, 226]}"
+images,error,BAD_SIZE,img_0122,,cạnh ngắn 180px < 250px,"{""size"": [240, 180]}"
+images,error,CORRUPT_IMAGE,img_0136,,không mở được: OSError,
+duplicates,error,DUP_IMAGE_EXACT,img_0039,,trùng từng byte với img_0012,"{""of"": ""img_0012""}"
+duplicates,error,LEAK_TEST,img_0049,,trùng ảnh kho test/val: test/test_033.jpg,"{""of"": ""test/test_033.jpg""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0076,,trùng gần đúng với img_0042 (phash 0),"{""of"": ""img_0042"", ""dist"": 0}"
+duplicates,error,DUP_IMAGE_EXACT,img_0080,,trùng từng byte với img_0071,"{""of"": ""img_0071""}"
+duplicates,error,LEAK_TEST,img_0101,,trùng ảnh kho test/val: test/test_039.jpg,"{""of"": ""test/test_039.jpg""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0102,,trùng từng byte với img_0082,"{""of"": ""img_0082""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0143,,trùng gần đúng với img_0037 (phash 0),"{""of"": ""img_0037"", ""dist"": 0}"
+duplicates,error,DUP_IMAGE_EXACT,img_0156,,trùng từng byte với img_0147,"{""of"": ""img_0147""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0162,,trùng từng byte với img_0054,"{""of"": ""img_0054""}"
+duplicates,error,LEAK_TEST,img_0167,,trùng ảnh kho test/val: test/test_044.jpg,"{""of"": ""test/test_044.jpg""}"
+duplicates,error,LEAK_TEST,img_0174,,trùng ảnh kho test/val: test/test_085.jpg,"{""of"": ""test/test_085.jpg""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0203,,trùng từng byte với img_0145,"{""of"": ""img_0145""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0207,,trùng từng byte với img_0182,"{""of"": ""img_0182""}"
+duplicates,error,LEAK_TEST,img_0221,,trùng ảnh kho test/val: test/test_009.jpg,"{""of"": ""test/test_009.jpg""}"
+duplicates,error,DUP_IMAGE_EXACT,img_0222,,trùng từng byte với img_0151,"{""of"": ""img_0151""}"
+duplicates,error,DUP_IMAGE_NEAR,img_0223,,trùng gần đúng với img_0077 (phash 6),"{""of"": ""img_0077"", ""dist"": 6}"
