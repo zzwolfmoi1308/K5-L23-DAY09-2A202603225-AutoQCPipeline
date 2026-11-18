@@ -17,10 +17,13 @@ TODO(học viên): vì sao `05_review_queue.csv` xếp ảnh đầu hàng như v
 ## 3. Calibration (2 ngưỡng)
 | Tham số | Khởi đầu | Đã chọn | Precision / Recall (trước → sau) | Lý do (đánh đổi) |
 |---|---|---|---|---|
-| `duplicates.phash_dist` | 2 | TODO(học viên) | | |
-| `second_opinion.conf` | 0.25 | TODO(học viên) | | |
+| `duplicates.phash_dist` | 2 | 8 | P: 1.00 → 1.00<br>R: 0.50 → 0.67 | Ngưỡng 2 quá chặt (bỏ sót 50% ảnh gần trùng). Chọn 8 tăng recall lên 0.67 mà vẫn giữ precision 1.00; tránh bẫy của ngưỡng 16 trên tập raw gây xóa nhầm ảnh thật. |
+| `second_opinion.conf` | 0.25 | 0.60 | Missing: P: 0.50 → 0.57, R: 1.00 → 1.00<br>Wrong class: P: 0.56 → 0.62, R: 0.83 → 0.83 | Ngưỡng 0.25 tạo quá nhiều báo động giả (P=0.50) khiến hàng đợi phình to 106 ảnh (vượt ngân sách 80). Chọn 0.60 tăng precision lên 62% cho wrong class và 57% cho missing, giảm số ảnh cảnh báo xuống 65 ảnh (vừa ngân sách duyệt 80 ảnh) mà vẫn giữ nguyên 100% recall cho lỗi thiếu nhãn, trước khi recall sụt giảm ở ngưỡng >= 0.70. |
 
-TODO(học viên): **một chỗ calibration có thể đánh lừa bạn**, kèm bằng chứng từ dữ liệu của bạn (vd. mở xem vài cặp ảnh bị cho là trùng; số ảnh bị loại ở bước 1 có hợp lý không?).
+**Một chỗ calibration có thể đánh lừa:**
+Tập calib chỉ có 39 ảnh với 6 cặp ảnh gần trùng mẫu. Nếu chỉ tối ưu mù quáng theo "F1 lớn nhất" trên calib, ta sẽ dễ chọn `phash_dist = 16` (F1 đạt 0.91). Tuy nhiên, khi thử nghiệm thực tế trên tập raw 224 ảnh:
+- Với `phash_dist = 8`: Phát hiện ổn định 16 ảnh (8 trùng byte, 3 gần trùng, 5 rò rỉ test).
+- Với `phash_dist = 16`: Số ảnh bị cờ rò rỉ test (`LEAK_TEST`) nhảy vọt từ 5 lên 11 ảnh và gần trùng (`DUP_IMAGE_NEAR`) tăng lên 7 ảnh. Rất nhiều ảnh có bối cảnh tương tự bị nhận nhầm là trùng lặp và bị hệ thống tự động xóa oan (`remove_image`). Do đó, không thể chỉ nhìn vào F1 của tập calib nhỏ mà phải đối chiếu trực tiếp với dữ liệu raw.
 
 ## 4. Cửa chặn và điều pipeline KHÔNG bắt được
 TODO(học viên): (a) chứng minh gate chặn đúng: chạy `python -m pipeline.run --budget 0 --reports work/rep_nb --export-dir work/exp_nb` (không có người duyệt nên ảnh thiếu file nhãn còn nguyên), chỉ ra kết luận **Rework**, mã thoát 20 và việc **không xuất** dataset. (Đừng sửa tay `work/run/ds`: pipeline dựng lại thư mục này từ raw mỗi lần chạy.)
