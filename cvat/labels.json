@@ -1,0 +1,58 @@
+[
+  {
+    "name": "car",
+    "color": "#ff8a3d",
+    "type": "rectangle",
+    "attributes": [
+      {
+        "name": "can_review",
+        "mutable": false,
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": []
+      }
+    ]
+  },
+  {
+    "name": "person",
+    "color": "#2fbf71",
+    "type": "rectangle",
+    "attributes": [
+      {
+        "name": "can_review",
+        "mutable": false,
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": []
+      }
+    ]
+  },
+  {
+    "name": "truck",
+    "color": "#7b61ff",
+    "type": "rectangle",
+    "attributes": [
+      {
+        "name": "can_review",
+        "mutable": false,
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": []
+      }
+    ]
+  },
+  {
+    "name": "bus",
+    "color": "#e5484d",
+    "type": "rectangle",
+    "attributes": [
+      {
+        "name": "can_review",
+        "mutable": false,
+        "input_type": "checkbox",
+        "default_value": "false",
+        "values": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+type,image,line,detail
+MISSING_LABEL_FILE,calib_010,,
+MISSING_LABEL_FILE,calib_013,,
+FALSE_POS,calib_001,4,box ngẫu nhiên
+LOOSE_BOX,calib_002,3,scale=1.54
+WRONG_CLASS,calib_004,3,person->car
+FALSE_POS,calib_005,2,box ngẫu nhiên
+LOOSE_BOX,calib_006,1,scale=1.48
+WRONG_CLASS,calib_008,1,person->car
+WRONG_CLASS,calib_009,6,truck->bus
+MISSING_BOX,calib_011,,đã xoá
+LOOSE_BOX,calib_012,1,scale=1.45
+FALSE_POS,calib_014,6,box ngẫu nhiên
+MISSING_BOX,calib_015,,đã xoá
+MISSING_BOX,calib_016,,đã xoá
+FALSE_POS,calib_017,2,box ngẫu nhiên
+WRONG_CLASS,calib_018,1,person->car
+MISSING_BOX,calib_019,,đã xoá
+MISSING_BOX,calib_020,,đã xoá
+MISSING_BOX,calib_021,,đã xoá
+FALSE_POS,calib_022,2,box ngẫu nhiên
+LOOSE_BOX,calib_023,2,scale=1.58
+LOOSE_BOX,calib_024,1,scale=1.54
+MISSING_BOX,calib_025,,đã xoá
+WRONG_CLASS,calib_026,2,person->car
+WRONG_CLASS,calib_027,2,person->car
+MISSING_BOX,calib_028,,đã xoá
+BAD_CLASS_ID,calib_023,3,id=4
+BAD_CLASS_ID,calib_004,5,id=93
+BOX_OUT_OF_IMAGE,calib_017,1,overflow=0.004
+BOX_OUT_OF_IMAGE,calib_001,3,overflow=0.004
+BOX_OUT_OF_IMAGE,calib_003,1,overflow=0.030
+BOX_OUT_OF_IMAGE,calib_002,2,overflow=0.065
+BOX_OUT_OF_IMAGE,calib_019,1,overflow=0.010
+BOX_ZERO,calib_011,2,w=0 hoặc h=0
+BOX_ZERO,calib_012,2,w=0 hoặc h=0
+BAD_FORMAT,calib_008,3,thiếu cột / không phải số
+BAD_FORMAT,calib_007,4,thiếu cột / không phải số
+DUP_BOX,calib_009,7,lặp dòng 1
+DUP_BOX,calib_014,7,lặp dòng 4
+DUP_BOX,calib_024,2,lặp dòng 1
+DUP_IMAGE_EXACT,calib_031,,của calib_022; mức biến đổi=0 (byte-exact)
+DUP_IMAGE_EXACT,calib_032,,của calib_006; mức biến đổi=0 (byte-exact)
+DUP_IMAGE_EXACT,calib_033,,của calib_011; mức biến đổi=0 (byte-exact)
+DUP_IMAGE_NEAR,calib_034,,của calib_012; mức biến đổi=0
+DUP_IMAGE_NEAR,calib_035,,của calib_025; mức biến đổi=1
+DUP_IMAGE_NEAR,calib_036,,của calib_009; mức biến đổi=2
+DUP_IMAGE_NEAR,calib_037,,của calib_015; mức biến đổi=3
+DUP_IMAGE_NEAR,calib_038,,của calib_024; mức biến đổi=4
+DUP_IMAGE_NEAR,calib_039,,của calib_019; mức biến đổi=2
+BAD_CLASS_NAME,data.yaml,,Bus

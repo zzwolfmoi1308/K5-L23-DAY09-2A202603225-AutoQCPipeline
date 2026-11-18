@@ -1,0 +1,5 @@
+# Đủ để làm Bước 1–5 (viết check, calibrate, chạy pipeline). Dự đoán của model đã lưu sẵn trong data/cache/ nên KHÔNG cần torch.
+pillow>=10.0
+imagehash>=4.3
+pyyaml>=6.0
+pytest>=7.0

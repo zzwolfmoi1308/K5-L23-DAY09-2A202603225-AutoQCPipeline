@@ -1,0 +1,94 @@
+{
+ "scripts/human_review_sim.py": "7988ca22827f780a7043a2300490e679a1697154",
+ "pipeline/run.py": "4b329fecd505a9fafb6cbfe6771d56b30fc37a2b",
+ "pipeline/steps/review_queue.py": "a8ca0e1bd60d99ea56e8412d8ef3fb3cb622b60f",
+ "pipeline/steps/export.py": "d2d85bf9b7de39802dc65ace992579f06950da13",
+ "pipeline/steps/intake.py": "e8d530a70ce193eac244cc7c4ee0af6b6cf6f23f",
+ "pipeline/steps/report.py": "8fd070732b3568f782dc02ad13eced69e342b735",
+ "pipeline/steps/__init__.py": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+ "pipeline/checks/__init__.py": "e0a23ad57343b1a7098108d8657177fcbb2cac9f",
+ "pipeline/checks/missing_labels.py": "bb71b13ff4a7bb147959b423c8d69aad938eebf8",
+ "pipeline/checks/duplicates.py": "0ac4345574254cc8c7e0fd3288a9d62f1d079d73",
+ "pipeline/checks/class_names.py": "a412905656e29c8c5598e98e7c582e5d070e3310",
+ "pipeline/checks/images.py": "01500be3c266395b9e49f3659a08ed912311bff0",
+ "pipeline/checks/stats.py": "81fa6ff477a4969df4df0b89126674c07824f8cd",
+ "pipeline/calibrate.py": "cebe2e719ae48d21f990dea95ea99739db68cfbc",
+ "pipeline/common.py": "af979fbe5dcfae7a83c056a635404967da7f86fb",
+ "pipeline/model_cache.py": "23440d44bdd7de5b10b9d351ed5fab2debdb851c",
+ "scripts/train_compare.py": "789ea3f152678021a18dbe40c42ef02f90100eb0",
+ "scripts/materialize_dataset.py": "95e61f1a22e92dd1b0e7c6f06399159ba06f9d9d",
+ "scripts/summarize_results.py": "bf1c5dac4d8f9148500d87fa36fe7178c350323e",
+ "data/cache/checker_preds.json": "5e5dd52208bfb22534fbb6725e9019a1a0eb88d3",
+ "data/calib/MANIFEST.csv": "746ed0c0327ba1b66f188e617f2ac9bf960921a4",
+ "tests/conftest.py": "26f4a21a531e8eca7f26cb36dc64c59b210f031f",
+ "tests/test_autofix.py": "855f4304f0b45a227f8ef3f25f834c39157e5451",
+ "tests/test_class_names.py": "b5a253db1352aa2e728567f2bf34bf432b1b95eb",
+ "tests/test_duplicates.py": "01c03cc56617f12db594cbb5fb9678ea54bc5a15",
+ "tests/test_gate.py": "55f61c03b6f18ccfc5fba3a565174662d718d650",
+ "tests/test_images.py": "eb836f7b78b01654bdadad0f4570d294b31b4db4",
+ "tests/test_label_format.py": "64618aa35fd2369195a09220c46f998ba3864d53",
+ "tests/test_missing_labels.py": "8623f720c48501ff5d8fcd2e70acbc2e11137282",
+ "tests/test_pipeline_e2e.py": "81155eb2ceda56954a536f60e40b0e7245646013",
+ "tests/test_second_opinion.py": "96b537f6aeb75a086f863dc4f998426b69c738a5",
+ "tests/test_stats.py": "bc5e811152f7b9c9cedadc1de8376098529d000b",
+ "__config_fixed__": {
+  "classes": [
+   "car",
+   "person",
+   "truck",
+   "bus"
+  ],
+  "models": {
+   "checker": {
+    "weights": "yolo26l.pt",
+    "conf": 0.1,
+    "cache": "data/cache/checker_preds.json"
+   }
+  },
+  "intake": {
+   "min_side_px": 250,
+   "reference_dirs": [
+    "data/test/images",
+    "data/gold_val/images"
+   ]
+  },
+  "duplicates": {},
+  "label_format": {
+   "overflow_tol": 0.002,
+   "min_box_px": 12,
+   "max_box_frac": 0.95,
+   "dup_box_iou": 0.9
+  },
+  "stats": {
+   "rare_class_min_boxes": 5,
+   "dense_image_max_boxes": 25
+  },
+  "second_opinion": {
+   "min_area_px": 600,
+   "fp_conf": 0.1,
+   "iou_missing": 0.3,
+   "iou_match": 0.5,
+   "iou_loose": 0.5
+  },
+  "review": {
+   "budget_images": 80,
+   "weights": {
+    "POSSIBLE_WRONG_CLASS": 3,
+    "POSSIBLE_MISSING": 2,
+    "POSSIBLE_FALSE_POS": 2,
+    "POSSIBLE_LOOSE_BOX": 1.5,
+    "BOX_TINY": 0.3,
+    "BOX_HUGE": 0.5,
+    "EMPTY_LABEL": 1,
+    "DENSE_IMAGE": 0.3,
+    "FIXED_DROP_LINE": 2,
+    "FIXED_CLIP_BOX": 1,
+    "NEEDS_LABEL": 10,
+    "default": 1
+   }
+  },
+  "gate": {
+   "warn_ratio_hold": 0.1
+  }
+ }
+}

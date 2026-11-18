@@ -1,0 +1,40 @@
+# Cấu hình pipeline. HAI ngưỡng đánh dấu  # <-- CALIBRATE  là giá trị KHỞI ĐẦU chưa tốt:
+# bạn chỉnh bằng bằng chứng từ `make calibrate` (xem GUIDE.md, Bước 3). Mọi mục khác là quy tắc dự án, đã cố định.
+classes: [car, person, truck, bus]          # id 0..3 — không đổi
+
+models:
+  checker:  {weights: yolo26l.pt, conf: 0.10, cache: data/cache/checker_preds.json}
+
+intake:
+  min_side_px: 250
+  reference_dirs: [data/test/images, data/gold_val/images]     # kho cũ: ảnh trùng với đây = rò rỉ
+
+duplicates:
+  phash_dist: 2            # <-- CALIBRATE  (khoảng cách Hamming tối đa để coi là "trùng gần đúng")
+
+label_format:
+  overflow_tol: 0.002      # box tràn quá mức này mới báo; đơn vị: tỉ lệ ảnh (cố định)
+  min_box_px: 12           # cạnh ngắn (px) < ngưỡng => cảnh báo BOX_TINY (quy tắc dự án, KHÔNG có đáp án để calibrate)
+  max_box_frac: 0.95
+  dup_box_iou: 0.9
+
+stats:
+  rare_class_min_boxes: 5
+  dense_image_max_boxes: 25
+
+second_opinion:            # so với model lớn hơn
+  conf: 0.25               # <-- CALIBRATE  (chỉ tin dự đoán của model có conf >= giá trị này)
+  min_area_px: 600         # bỏ qua dự đoán của model nhỏ hơn cỡ này (guideline: vật quá nhỏ không gán)
+  fp_conf: 0.1             # (cố định) box nhãn không khớp dự đoán nào (conf >= fp_conf) => POSSIBLE_FALSE_POS
+  iou_missing: 0.3         # dự đoán của model không khớp box nào (IoU < 0.3) => POSSIBLE_MISSING
+  iou_match: 0.5           # coi là "cùng vật" khi IoU >= 0.5
+  iou_loose: 0.5           # (cố định) cùng vật, cùng lớp nhưng IoU < 0.5 => POSSIBLE_LOOSE_BOX
+
+review:
+  budget_images: 80        # người duyệt tối đa bấy nhiêu ảnh (mô phỏng bằng scripts/human_review_sim.py)
+  weights: {POSSIBLE_WRONG_CLASS: 3, POSSIBLE_MISSING: 2, POSSIBLE_FALSE_POS: 2, POSSIBLE_LOOSE_BOX: 1.5,
+            BOX_TINY: 0.3, BOX_HUGE: 0.5, EMPTY_LABEL: 1, DENSE_IMAGE: 0.3, FIXED_DROP_LINE: 2, FIXED_CLIP_BOX: 1,
+            NEEDS_LABEL: 10, default: 1}
+
+gate:
+  warn_ratio_hold: 0.10    # >= 10% ảnh còn cảnh báo chưa người duyệt => Hold (slide ví dụ 2%; dự án đặt trong guideline)
