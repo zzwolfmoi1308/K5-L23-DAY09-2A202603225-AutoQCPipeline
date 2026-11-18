@@ -1,4 +1,4 @@
-# Báo cáo Day 09 — <Họ và tên>, <MSHV>
+# Báo cáo Day 09 — <Ngô Xuân Tùng>, <2A202603225>
 
 > Xoá mọi `TODO(học viên)` và dòng gợi ý. Mỗi ý trả lời bằng **số lấy từ `submission/reports/`**, kèm mẫu số. Cả báo cáo ~1–2 trang.
 
@@ -23,7 +23,13 @@ TODO(học viên): vì sao `05_review_queue.csv` xếp ảnh đầu hàng như v
 TODO(học viên): **một chỗ calibration có thể đánh lừa bạn**, kèm bằng chứng từ dữ liệu của bạn (vd. mở xem vài cặp ảnh bị cho là trùng; số ảnh bị loại ở bước 1 có hợp lý không?).
 
 ## 4. Cửa chặn và điều pipeline KHÔNG bắt được
-TODO(học viên): (a) chứng minh gate chặn đúng: chạy `python -m pipeline.run --budget 0 --reports work/rep_nb --export-dir work/exp_nb` (không có người duyệt nên ảnh thiếu file nhãn còn nguyên), chỉ ra kết luận **Rework**, mã thoát 20 và việc **không xuất** dataset. (Đừng sửa tay `work/run/ds`: pipeline dựng lại thư mục này từ raw mỗi lần chạy.) (b) ≥ 2 điểm mù có bằng chứng (box lỏng nhẹ, nhầm lớp mà model lớn cũng nhầm, ảnh trùng biến đổi mạnh…).
+TODO(học viên): (a) chứng minh gate chặn đúng: chạy `python -m pipeline.run --budget 0 --reports work/rep_nb --export-dir work/exp_nb` (không có người duyệt nên ảnh thiếu file nhãn còn nguyên), chỉ ra kết luận **Rework**, mã thoát 20 và việc **không xuất** dataset. (Đừng sửa tay `work/run/ds`: pipeline dựng lại thư mục này từ raw mỗi lần chạy.)
+
+**(b) Các lỗi và điểm mù quan sát thấy bằng mắt thường (từ `work/viz/`):**
+1. **`img_0001.png` (Bỏ sót đối tượng - Missing box):** Người chiến sĩ mặc áo rằn ri đứng ở giữa/bên phải hoàn toàn không có bounding box nào, trong khi người mặc vest và người ngồi góc dưới đều có nhãn.
+2. **`img_0004.png` (Thiếu nhãn hoàn toàn - Missing label file):** Bức ảnh chụp nhà ga có 2 xe ô tô đỗ rất rõ ở góc dưới bên phải (chiếc màu bạc và chiếc màu đen), nhưng cả bức ảnh không có bất kỳ bounding box nào.
+3. **`img_0005.png` (Gán nhầm lớp - False positive / Wrong class):** Một thùng rác / trụ kim loại màu xanh lam ở vỉa hè phía xa bên trái (sau đuôi xe buýt) bị gán nhãn nhầm thành `person`.
+4. **`img_0007.png` (Thiếu nhất quán trong cùng ảnh):** Bãi đỗ xe phía sau máy bay có một hàng dài ô tô, nhưng chỉ một vài chiếc được gán nhãn `car`, các xe khác đỗ ngay cạnh (như chiếc ô tô màu trắng) bị bỏ sót hoàn toàn.
 
 ## 5. Train: raw vs clean (tùy chọn, chấm riêng)
 Chưa train: ghi "chưa chạy" và lý do, rồi bỏ qua phần còn lại của mục này. Nếu đã train: dán bảng từ `submission/results/comparison.md` (model, epoch, seed, số ảnh train mỗi biến thể).
